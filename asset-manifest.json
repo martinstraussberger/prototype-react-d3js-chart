@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/prototype-react-d3js-chart/static/css/main.db5c4c03.css",
+    "main.js": "/prototype-react-d3js-chart/static/js/main.1beae7fb.js",
+    "index.html": "/prototype-react-d3js-chart/index.html",
+    "main.db5c4c03.css.map": "/prototype-react-d3js-chart/static/css/main.db5c4c03.css.map",
+    "main.1beae7fb.js.map": "/prototype-react-d3js-chart/static/js/main.1beae7fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db5c4c03.css",
+    "static/js/main.1beae7fb.js"
+  ]
+}
