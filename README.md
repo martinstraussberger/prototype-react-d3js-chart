@@ -8,4 +8,4 @@ This React-based D3.js prototype showcases the integration of both technologies 
 
 ### Preview
 
-![]()
+![](./public/vitalChart.png)
