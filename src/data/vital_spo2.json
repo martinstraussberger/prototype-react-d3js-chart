@@ -1,0 +1,22 @@
+[
+  {
+    "vitalValue": 99,
+    "timestamp": "2022-03-10T11:05:05.000Z"
+  },
+  {
+    "vitalValue": 94,
+    "timestamp": "2022-03-10T11:40:10.000Z"
+  },
+  {
+    "vitalValue": 85,
+    "timestamp": "2022-03-10T12:00:10.000Z"
+  },
+  {
+    "vitalValue": 76,
+    "timestamp": "2022-03-10T12:30:10.000Z"
+  },
+  {
+    "vitalValue": 70,
+    "timestamp": "2022-03-10T12:45:10.000Z"
+  }
+]

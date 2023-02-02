@@ -1,0 +1,47 @@
+:root {
+  --fontBase: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+    Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--fontBase);
+  margin: 0;
+  overflow: hidden;
+}
+
+pre {
+  font-size: 7em;
+}
+
+.tick {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tick line {
+  stroke: #c0c0bb;
+}
+
+.tick text {
+  fill: #634f5d;
+}
+
+.mark circle {
+  fill: #137b80;
+}
+
+.mark path {
+  stroke: #137b80;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.axis-label {
+  fill: #634f5d;
+  font-size: 1.5em;
+}
+
+#axis__marks__group circle {
+  cursor: pointer;
+}

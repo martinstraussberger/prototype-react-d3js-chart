@@ -1,0 +1,272 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.defiBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0px 20px 0px;
+}
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 2.5em 1.25em 2.5em;
+  width: fit-content;
+  border: 1px solid #e5e5e5;
+  /* border Radius von root */
+  border-radius: 12px;
+}
+
+.chartContainer .line {
+  stroke-width: 2;
+  fill: none;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+  font-family: Sans-Serif, Arial;
+}
+
+.axis path {
+  stroke: black;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.title-text {
+  font-size: 12px;
+}
+
+.tick__fontSize__sm {
+  font-size: 14px;
+}
+
+.tick__fontSize__md {
+  font-size: 16px;
+}
+
+.tick line {
+  stroke: #c4c4c4;
+}
+
+.drawLine {
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* TO-DO: better not as circle but specific  */
+.cursor circle {
+  cursor: pointer;
+}
+
+/* Temperature Graph */
+.__temperatureBlue circle {
+  fill: #99bafa;
+}
+
+.__temperatureBlue path {
+  stroke: #99bafa;
+}
+
+/* BloodPressure NIV Graph */
+.__bloodPressure circle {
+  fill: #f69191;
+}
+
+.__bloodPressure path {
+  stroke: #f69191;
+}
+
+.__spo2 circle {
+  fill: #8155e0;
+}
+
+.__spo2 path {
+  stroke: #8155e0;
+}
+
+/* HeartFrequency Graph */
+.__heartFrequency circle {
+  fill: black;
+}
+
+.__heartFrequency path {
+  fill: black;
+}
+
+/* Colors */
+.__black {
+  fill: black;
+}
+
+.__purple {
+  fill: #8155e0;
+}
+
+.__roseRed {
+  fill: #f69191;
+}
+
+.__temperatureBlue {
+  fill: #99bafa;
+}
+
+.axisLabel {
+  fill: black;
+  font-size: 1em;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: fit-content;
+  height: 30px;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  pointer-events: none;
+  /* filter: drop-shadow(0 0 0.75rem #ccc); */
+}
+
+g {
+  text-align: center;
+}
+
+/* Modal Button */
+.button {
+  width: fit-content;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.__purple {
+  background-color: #8155e0;
+  color: #fff;
+
+  &:hover {
+    background-color: #8155e0d1;
+  }
+}
+
+.__gray {
+  background-color: #eef1f7;
+  color: #808187;
+
+  &:hover {
+    background-color: #eef1f7a1;
+  }
+}
+
+// mobile
+@media (min-width: 300px) and (max-width: 600px) {
+  .modal {
+    &.active &__content {
+      width: 90%;
+    }
+  }
+}
+
+// desktop
+@media (min-width: 800px) {
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  background-color: rgba(#000000, 0.4);
+  transition: 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    width: 440px;
+    margin: 15% auto;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    transition: inherit;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100px);
+  }
+
+  &.active &__content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__header {
+    padding: 12px 20px 16px 20px;
+  }
+
+  &__body {
+    text-align: center;
+    padding: 0px 0px 16px 0px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0px 20px 0px;
+    align-items: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 6px;
+    right: 14px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #bab8b8;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.modalInput {
+  width: 80px;
+  height: 50px;
+  margin: 0.375rem 0.5rem;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 1px solid #c4c4c4;
+}
+
+input {
+  text-align: center;
+}
+
+.modalText {
+  text-align: justify;
+}
